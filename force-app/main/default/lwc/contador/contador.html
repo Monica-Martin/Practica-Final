@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Contador de Tiempo">
+
+        <div class="slds-p-around_medium timer-container">
+
+            <div class="time-display">
+                {formattedTime}
+            </div>
+
+            <div class="buttons">
+
+                <lightning-button label="Iniciar" variant="brand" onclick={startTimer} disabled={isRunning}></lightning-button>
+
+                <lightning-button label="Pausar" variant="neutral" onclick={pauseTimer} disabled={isPaused}></lightning-button>
+
+                <lightning-button label="Reiniciar" variant="destructive" onclick={resetTimer}></lightning-button>
+
+            </div>
+
+        </div>
+
+    </lightning-card>
+</template>
