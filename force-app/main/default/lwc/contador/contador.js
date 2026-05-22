@@ -4,13 +4,12 @@ export default class Contador extends LightningElement {
     totalSeconds = 0;
     timerId = null;
     isTimerRunning = false;
-    isTicking = false; // Propiedad para controlar el efecto de latido
+    isTicking = false;
 
     get isTimerPaused() {
         return !this.isTimerRunning;
     }
 
-    // Getter para añadir dinámicamente la clase CSS del latido
     get timerClass() {
         return this.isTicking ? 'timer-display tick' : 'timer-display';
     }
@@ -32,10 +31,8 @@ export default class Contador extends LightningElement {
             this.timerId = setInterval(() => {
                 this.totalSeconds++;
                 
-                // Activamos el efecto de latido
                 this.isTicking = true;
                 
-                // Lo quitamos poco después para que se note la animación de encogido/agrandado
                 setTimeout(() => {
                     this.isTicking = false;
                 }, 150);
