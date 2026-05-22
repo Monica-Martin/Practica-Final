@@ -4,7 +4,6 @@
         <div class="slds-p-around_medium">
 
             <div class="main-image-container">
-
                 <div class={fadeClass}>
                     <img src={selectedImage} alt="Imagen seleccionada" />
                 </div>
@@ -22,17 +21,14 @@
                         onclick={nextImage}>
                     </lightning-button-icon>
                 </div>
-
             </div>
 
             <div class="thumbnails">
-
-                <template for:each={images} for:item="img" for:index="index">
-                    <div key={img.id} class={getThumbClass} data-id={img.id} onclick={handleSelect}>
+                <template for:each={computedImages} for:item="img">
+                    <div key={img.id} class={img.thumbnailClass} data-id={img.id} onclick={handleSelect}>
                         <img src={img.url} alt={img.title} />
                     </div>
                 </template>
-
             </div>
 
         </div>
