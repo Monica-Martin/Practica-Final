@@ -1,23 +1,24 @@
 <template>
-    <lightning-card title="Contador de Tiempo">
-
-        <div class="slds-p-around_medium timer-container">
-
-            <div class="time-display">
-                {formattedTime}
+    <lightning-card title="Contador de Tiempo Dinámico" icon-name="utility:clock">
+        <div class="slds-p-around_medium slds-text-align_center">
+            
+            <div class="timer-container">
+                <span class={timerClass}>
+                    {formattedTime}
+                </span>
             </div>
 
-            <div class="buttons">
+            <div class="slds-m-top_medium">
+                <lightning-button label="Iniciar" variant="success" icon-name="utility:play" onclick={startTimer} disabled={isTimerRunning} class="slds-m-horizontal_x-small">
+                </lightning-button>
 
-                <lightning-button label="Iniciar" variant="brand" onclick={startTimer} disabled={isRunning}></lightning-button>
+                <lightning-button label="Pausar" variant="neutral" icon-name="utility:pause" onclick={pauseTimer} disabled={isTimerPaused} class="slds-m-horizontal_x-small">
+                </lightning-button>
 
-                <lightning-button label="Pausar" variant="neutral" onclick={pauseTimer} disabled={isPaused}></lightning-button>
-
-                <lightning-button label="Reiniciar" variant="destructive" onclick={resetTimer}></lightning-button>
-
+                <lightning-button label="Reiniciar" variant="destructive" icon-name="utility:refresh" onclick={resetTimer} class="slds-m-horizontal_x-small">
+                </lightning-button>
             </div>
 
         </div>
-
     </lightning-card>
 </template>

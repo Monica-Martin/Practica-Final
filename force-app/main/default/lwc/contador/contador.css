@@ -1,11 +1,17 @@
-.time-display {
+.timer-container {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-display {
     font-size: 3.5rem;
     font-weight: bold;
     font-family: "Courier New", monospace;
-
     letter-spacing: 3px;
     color: #1b96ff;
-
+    
     text-shadow:
         0 0 5px rgba(27, 150, 255, 0.6),
         0 0 10px rgba(27, 150, 255, 0.4),
