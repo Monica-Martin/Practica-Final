@@ -1,0 +1,22 @@
+.time-display {
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: "Courier New", monospace;
+
+    letter-spacing: 3px;
+    color: #1b96ff;
+
+    text-shadow:
+        0 0 5px rgba(27, 150, 255, 0.6),
+        0 0 10px rgba(27, 150, 255, 0.4),
+        0 0 20px rgba(27, 150, 255, 0.3);
+
+    transition: all 0.2s ease-in-out;
+}
+
+.tick {
+    transform: scale(1.05);
+    text-shadow:
+        0 0 10px rgba(27, 150, 255, 0.8),
+        0 0 25px rgba(27, 150, 255, 0.6);
+}
