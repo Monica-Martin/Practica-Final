@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Formulario de Contacto">
+        <div class="slds-p-around_medium">
+
+            <lightning-input label="Nombre" name="name" value={name} onchange={handleChange} onblur={handleBlur} class={nameClass} required></lightning-input>
+
+            <template if:true={errors.name}>
+                <div class="error">{errors.name}</div>
+            </template>
+
+            <lightning-input label="Email" name="email" type="email" value={email} onchange={handleChange} onblur={handleBlur} class={emailClass} required></lightning-input>
+
+            <template if:true={errors.email}>
+                <div class="error">{errors.email}</div>
+            </template>
+
+            <lightning-textarea label="Mensaje" name="message" value={message} onchange={handleChange} onblur={handleBlur} class={messageClass} required></lightning-textarea>
+
+            <template if:true={errors.message}>
+                <div class="error">{errors.message}</div>
+            </template>
+
+            <div class="slds-m-top_medium">
+                <lightning-button label="Enviar" variant="brand" onclick={handleSubmit} disabled={isInvalid}></lightning-button>
+            </div>
+
+        </div>
+    </lightning-card>
+</template>

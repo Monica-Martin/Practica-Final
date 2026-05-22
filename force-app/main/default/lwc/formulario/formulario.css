@@ -1,0 +1,10 @@
+.error {
+    color: #c23934;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.error-border input,
+.error-border textarea {
+    border: 1px solid #c23934 !important;
+}
