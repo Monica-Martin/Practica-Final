@@ -1,0 +1,41 @@
+<template>
+    <lightning-card title="Galería de imágenes">
+
+        <div class="slds-p-around_medium">
+
+            <div class="main-image-container">
+
+                <div class={fadeClass}>
+                    <img src={selectedImage} alt="Imagen seleccionada" />
+                </div>
+
+                <div class="controls">
+                    <lightning-button-icon
+                        icon-name="utility:chevronleft"
+                        alternative-text="Anterior"
+                        onclick={prevImage}>
+                    </lightning-button-icon>
+
+                    <lightning-button-icon
+                        icon-name="utility:chevronright"
+                        alternative-text="Siguiente"
+                        onclick={nextImage}>
+                    </lightning-button-icon>
+                </div>
+
+            </div>
+
+            <div class="thumbnails">
+
+                <template for:each={images} for:item="img" for:index="index">
+                    <div key={img.id} class={getThumbClass} data-id={img.id} onclick={handleSelect}>
+                        <img src={img.url} alt={img.title} />
+                    </div>
+                </template>
+
+            </div>
+
+        </div>
+
+    </lightning-card>
+</template>
