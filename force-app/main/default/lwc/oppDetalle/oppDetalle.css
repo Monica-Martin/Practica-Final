@@ -1,0 +1,48 @@
+.container {
+    padding: 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.light {
+    background: #ffffff;
+    color: #1a1a1a;
+    border: 1px solid #e5e5e5;
+}
+
+.dark {
+    background: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #333;
+}
+
+.header h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.field {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(150,150,150,0.2);
+}
+
+.label {
+    font-weight: bold;
+}
+
+.value {
+    font-family: monospace;
+}
+
+.actions {
+    margin-top: 15px;
+    text-align: right;
+}
